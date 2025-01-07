@@ -1,0 +1,686 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+:root {
+    --movistar-blue: #00A9E0;
+    /* Azul principal */
+    --dark-blue: #0078B0;
+    /* Azul oscuro */
+    --light-blue: #A8D8F0;
+    /* Azul claro */
+    --mint-green: #76D1B9;
+    /* Verde menta */
+    --intense-green: #43B99F;
+    /* Verde intenso */
+    --light-green: #E5F9F7;
+    /* Verde muy claro */
+    --white: #FFFFFF;
+    /* Blanco */
+}
+
+/*Formato del Boton General*/
+
+.btn-1 {
+    display: inline-block;
+    padding: 11px 35px;
+    background-image: linear-gradient(325deg, var(--dark-blue)0%, var(--intense-green)55%, var(--dark-blue)90%);
+    background-size: 280% auto;
+    color: var(--white);
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+    transition: 0.8s;
+}
+
+.btn-1:hover {
+    background-position: right top;
+}
+
+.btn-1:is(:focus, :focus-visible, :active) {
+    outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .btn-1 {
+        transition: linear;
+    }
+}
+
+/*Para que al redireccionar a la misma pagina no sea de manera brusca*/
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Images/Niños\ viendo\ celular.jpg);
+    background-position: center top 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 18px;
+    padding: 20px;
+    color: var(--light-green);
+    display: block;
+    font-weight: 600;
+}
+
+.menu .navbar ul li a:hover {
+    color: var(--dark-blue);
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    text-align: center;
+}
+
+.header-content h1 {
+    font-size: 75px;
+    line-height: 80px;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    background-image: linear-gradient(325deg, var(--dark-blue)0%, var(--intense-green)55%, var(--dark-blue)90%);
+    background-size: 280%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.header-content h1:hover,
+.Planes h2:hover {
+    background-position: right top;
+}
+
+.header-content p {
+    font-size: 16px;
+    color: #c5c5c5;
+    padding: 0 250px;
+    margin-bottom: 25px;
+}
+
+/*Seccion de servicios*/
+.servicios {
+    padding: 100px 0;
+    background-color: var(--white);
+    position: relative;
+}
+
+.servicios-content {
+    text-align: center;
+}
+
+.servicios-content h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    padding: 0 250px;
+    margin-bottom: 15px;
+}
+
+.txt-p {
+    font-size: 16px;
+    color: var(--movistar-blue);
+    padding: 0 250px;
+    margin-bottom: 35px;
+}
+
+.Tipos-Servicios {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.servicio {
+    padding: 0 25px;
+}
+
+.servicio img {
+    width: 200px;
+}
+
+.servicio p {
+    color: var(--movistar-blue);
+}
+
+.servicio h3 {
+    color: var(--dark-blue);
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/*******************Planes********************/
+
+.Planes {
+    display: flex;
+    flex-direction: column;
+    background: #e9e9e9;
+    min-height: 100vh;
+}
+
+.Planes_Titulo {
+    padding-top: 10px;
+    font-size: 55px;
+    line-height: 80px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    background-image: linear-gradient(325deg, var(--dark-blue)0%, var(--intense-green)55%, var(--dark-blue)90%);
+    background-size: 280%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.8s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.Planes_Titulo:hover {
+    background-position: right top;
+}
+
+.Pricing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+.table {
+    margin: 2.6em 1.5em;
+    text-align: center;
+    position: relative;
+}
+
+.table-header {
+    width: 20em;
+    height: 13em;
+    background: linear-gradient(331deg, var(--intense-green), var(--movistar-blue));
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    clip-path: polygon(0 0,
+            100% 0%,
+            100% 80%,
+            50% 100%,
+            0% 80%);
+}
+
+.shadow-container {
+    filter: drop-shadow(0 1em 1em rgba(0, 0, 0, 0.2));
+}
+
+.price {
+    background: #fff;
+    width: 7em;
+    height: 7em;
+    position: absolute;
+    top: -3.5em;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 1.5em 1em 1em 1em;
+    border-radius: 50%;
+    z-index: 1;
+    box-shadow: 0 1em 1em rgba(0, 0, 0, 0.3);
+}
+
+.price h1 {
+    font-size: 1.7em;
+    color: var(--dark-blue);
+}
+
+.price small {
+    color: #999;
+}
+
+.title {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.title h1 {
+    margin: 0.3em;
+    font-size: 1.8em;
+    letter-spacing: 4px;
+}
+
+.title p {
+    font-size: 0.6em;
+    letter-spacing: 1px;
+}
+
+.table-body {
+    width: 18em;
+    margin: -4em auto 0 auto;
+    padding: 4em 1em 1em 1em;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 4em rgb(0, 0, 0, .1);
+}
+
+.body-title h2 {
+    margin: 1em 0 0.2em 0;
+    font-size: 35px;
+    background-image: linear-gradient(325deg, var(--dark-blue)0%, var(--intense-green)55%, var(--dark-blue)90%);
+    background-size: 280%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.body-title h2:hover {
+    background-position: right top;
+}
+
+.body-title p {
+    color: #777;
+}
+
+.table ul {
+    list-style: none;
+    margin: 2em 0;
+}
+
+.table li {
+    padding: 1.3em 0;
+    color: #999;
+    font-size: 0.9em;
+}
+
+.table li:nth-child(odd) {
+    background: #eee;
+}
+
+.table li i {
+    margin-right: 0.3em;
+}
+
+.table li .fa-check {
+    color: #00ff44;
+}
+
+.table button {
+    background: linear-gradient(331deg, var(--intense-green), var(--movistar-blue));
+    color: #fff;
+    border: none;
+    border-radius: 5em;
+    padding: 1.1em 2.3em;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: absolute;
+    bottom: -1.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.table button:hover {
+    background: #fff !important;
+    color: #111;
+}
+
+.table:nth-child(odd) {
+    font-size: 15px;
+}
+
+.table:nth-child(2) .table-header,
+.table:nth-child(2) button {
+    background: linear-gradient(331deg, var(--dark-blue), var(--movistar-blue));
+}
+
+.table:nth-child(2) .price h1 {
+    color: var(--movistar-blue)
+}
+
+/*Celulares y Accesorios*/
+
+.Productos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Images/Movistar-Fondo-Nubes.webp);
+    background-position: center top 35%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding-bottom: 40px;
+}
+
+.Productos h2 {
+    font-size: 55px;
+    color: var(--dark-blue);
+    transition: 0.8s;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.contenedor_productos {
+    width: 90%;
+    height: 100%;
+    padding-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 10px;
+}
+
+.contenedor_productos .card {
+    width: 270px;
+    overflow: hidden;
+    text-align: center;
+    margin-bottom: 15px;
+    border: 2px solid var(--movistar-blue);
+    border-radius: 15px;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
+}
+
+.contenedor_productos .card .imagen-Producto {
+    width: 230px;
+    margin: 20px auto;
+}
+
+.contenedor_productos .card .imagen-Producto img {
+    width: 100%;
+}
+
+.contenedor_productos .card .Info-producto {
+    font-size: 18px;
+    padding: 0 25px;
+}
+
+.Info-producto h4 {
+    color: var(--movistar-blue);
+}
+
+.contenedor_productos .card .btn-producto {
+    width: 100%;
+}
+
+.contenedor_productos .card .btn-producto button {
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(331deg, var(--dark-blue), var(--movistar-blue));
+    border: 1px solid var(--intense-green);
+    outline: none;
+    color: var(--white);
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 0 0 15px 15px;
+}
+
+/*Mas Informacion*/
+
+.Mas-Información {
+    display: flex;
+}
+
+.Mas-Información h2 {
+    font-size: 55px;
+    line-height: 70px;
+    color: var(--dark-blue);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.Mas-Información p {
+    font-size: 16px;
+    color: #414247;
+    margin: 25px 0 45px 0;
+}
+
+.Mas-Información1 {
+    width: 50%;
+    padding: 100px 250px 100px 100px;
+    background-color: #E1E2E6;
+}
+
+.Mas-Información2 {
+    background-image: url(../Images/young_people_buying_new_smartphone_in_mobile_shop.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 50%;
+}
+
+.Mas-Información3 {
+    width: 50%;
+}
+
+.Mas-Información3 iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/*Footer*/
+.footer {
+    position: relative;
+    width: 100%;
+    background: var(--dark-blue);
+    min-height: 100px;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 10px 5px;
+    flex-wrap: wrap;
+}
+
+.icon-elem {
+    list-style: none;
+}
+
+.icon {
+    color: var(--white);
+    font-size: 32px;
+    display: inline-block;
+    margin: 0 10px;
+    transition: 0.5s;
+}
+
+.icon:hover {
+    transform: translateY(-10px);
+}
+
+.menu1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.menu-elem {
+    list-style: none;
+}
+
+.menu-icon {
+    color: var(--white);
+    font-size: 20px;
+    display: inline-block;
+    text-decoration: none;
+    margin: 5px 10px;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.menu-icon:hover {
+    opacity: 1;
+}
+
+.text {
+    color: var(--white);
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+@media(max-width:991px){
+
+    .menu{
+        padding: 30px;
+    }
+
+    .menu label{
+        display: initial;
+    }
+
+    .menu .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323337;
+        display: none;
+    }
+
+    .menu .navbar ul li{
+        width: 100%;
+    }
+
+    #menu:checked{
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar{
+        display: initial;
+    }
+
+    .header{
+        min-height: 0vh;
+    }
+
+    .header-content{
+        padding: 100px 30px;
+    }
+
+    .header-content p{
+        padding: 0;
+    }
+
+    .Mas-Información{
+        flex-direction: column;
+    }
+
+    .Mas-Información1{
+        width: 100%;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .Mas-Información2{
+        display: none;
+    }
+
+    .Mas-Información3 {
+        width: 100%;
+        height: 100%;
+    }
+
+    .opacity0{
+        display: none;
+    }
+
+    .reverse{
+        flex-direction: column-reverse;
+    }
+
+    .servicios{
+        padding: 30px;
+    }
+
+    .servicios-content h2{
+        padding: 0;
+    }
+
+    .txt-p{
+        padding: 0;
+    }
+
+    .Tipos-Servicios{
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+}
+
+@media(max-width:450px){
+    .header-content h1 {
+        font-size: 45px;
+    }
+}
+
+
+
